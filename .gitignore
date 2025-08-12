@@ -1,0 +1,21 @@
+#node_modules
+bank-loan-managment-system/public/frontend/node_modules/
+bank-loan-managment-system/backend/node_modules/
+
+
+# Environment variables
+*.env
+
+# Logs
+*.log
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build outputs (optional)
+bank-loan-managment-system/frontend/build/
+bank-loan-managment-system/frontend/dist/
+bank-loan-managment-system/backend/dist/

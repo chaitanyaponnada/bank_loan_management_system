@@ -1,0 +1,177 @@
+.overview-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overview-container .form-container {
+    flex-shrink: 0;
+    margin-bottom: 1.5rem;
+}
+
+.overview-results {
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 1.5rem 1rem 1.5rem;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-message {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.overview-message-container {
+    margin: auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 450px;
+}
+.overview-message-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+}
+.overview-message-container p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.overview-header {
+    text-align: center;
+    padding: 1rem 0;
+    flex-shrink: 0;
+}
+
+.overview-customer-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.total-loans-info {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+}
+
+.loans-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+    align-self: center;
+}
+
+.loan-list-item {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.loan-list-item:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.loan-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}
+
+.loan-id-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.loan-id-container span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.loan-id-value {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.status-badge.status-ACTIVE {
+    color: #c8f7c5;
+    background: rgba(39, 174, 96, 0.25);
+    border: 1px solid rgba(39, 174, 96, 0.5);
+}
+.status-badge.status-PAID_OFF {
+    color: #bdc3c7;
+    background: rgba(127, 140, 141, 0.25);
+    border: 1px solid rgba(127, 140, 141, 0.5);
+}
+
+.loan-item-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+.data-point {
+    display: flex;
+    flex-direction: column;
+}
+.data-point label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.25rem;
+}
+.data-point span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.loan-item-footer {
+    text-align: right;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.overview-results::-webkit-scrollbar {
+    width: 8px;
+}
+.overview-results::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.overview-results::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+.overview-results::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.6);
+}

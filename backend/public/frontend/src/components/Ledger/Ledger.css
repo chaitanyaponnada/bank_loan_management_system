@@ -1,0 +1,137 @@
+.ledger-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ledger-results {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.5rem; 
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.ledger-results::-webkit-scrollbar { width: 8px; }
+.ledger-results::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+.ledger-results::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.4); border-radius: 10px; }
+.ledger-results::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.6); }
+
+.ledger-header {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.customer-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+}
+
+.loan-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.loan-meta code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.ledger-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.data-point {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+}
+.data-point label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+.data-point span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.transactions-section h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.table-wrapper { overflow-x: auto; }
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+.transactions-table th, .transactions-table td {
+    padding: 1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+.transactions-table thead { border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+.transactions-table th {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+}
+.transactions-table tbody tr { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.transactions-table tbody tr:last-child { border-bottom: none; }
+.transactions-table tbody tr:hover { background-color: rgba(255, 255, 255, 0.05); }
+.transactions-table .amount-header,
+.transactions-table .amount-cell { text-align: right; }
+.transactions-table .amount-cell {
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.no-transactions {
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.status-badge {
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.status-badge.status-ACTIVE {
+    color: #c8f7c5;
+    background: rgba(39, 174, 96, 0.25);
+    border: 1px solid rgba(39, 174, 96, 0.5);
+}
+.status-badge.status-PAID_OFF {
+    color: #bdc3c7;
+    background: rgba(127, 140, 141, 0.25);
+    border: 1px solid rgba(127, 140, 141, 0.5);
+}

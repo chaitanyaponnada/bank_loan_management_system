@@ -1,0 +1,64 @@
+.component-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.modal-details {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modal-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.modal-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.modal-detail-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-value-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.modal-detail-value {
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.copy-button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+    text-align: center;
+}
+
+.copy-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+.copy-button.copied {
+    background: rgba(39, 174, 96, 0.4);
+    border-color: rgba(39, 174, 96, 0.6);
+    color: #c8f7c5;
+}

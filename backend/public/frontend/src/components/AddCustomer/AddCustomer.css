@@ -1,0 +1,35 @@
+.component-subtitle {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.customer-details-list {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.detail-item span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.detail-item strong, .detail-item code {
+    font-weight: 600;
+    color: #fff;
+}
+
+.detail-item code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+}
