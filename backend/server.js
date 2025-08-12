@@ -2,12 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 const db = require('./database.js');
-
+const path = require('path');
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 3001;
 const API_BASE_URL = '/api/v1';
 
 // Add a new customer
@@ -210,5 +209,17 @@ app.get(`${API_BASE_URL}/customers/:customer_id/overview`, (req, res) => {
         });
     });
 });
+// Serve static files from the React build folder
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// The "catchall" handler: for any request that doesn't
+// match an API route, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+});
+// =================================================================
+
+const PORT = process.env.PORT || 3001; // Use Render's port
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
