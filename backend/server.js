@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const db = require('./database.js');
 
@@ -8,20 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve React frontend build in production
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'public')));
-
-    // Catch-all route for React Router
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'public', 'index.html'));
-    });
-}
-
-const PORT = process.env.PORT || 3001; // Use Render's port
-
+const PORT = 3001;
 const API_BASE_URL = '/api/v1';
-
 
 // Add a new customer
 app.post(`${API_BASE_URL}/customers`, (req, res) => {
