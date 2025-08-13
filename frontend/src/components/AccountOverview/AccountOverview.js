@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AccountOverview.css';
 
-const API_URL = 'http://localhost:3001/api/v1';
+const API_URL = '/api/v1';
 function AccountOverview() {
     const [customerId, setCustomerId] = useState('');
     const [result, setResult] = useState(null);

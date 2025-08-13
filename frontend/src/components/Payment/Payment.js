@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Payment.css';
 import Modal from '../Modal/Modal';
 
-const API_URL = 'http://localhost:3001/api/v1';
+const API_URL = '/api/v1';
 
 function Payment() {
     const [formData, setFormData] = useState({

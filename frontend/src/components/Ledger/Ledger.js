@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Ledger.css';
 
-const API_URL = 'http://localhost:3001/api/v1';
+const API_URL = '/api/v1';
 
 function Ledger() {
     const [loanId, setLoanId] = useState('');

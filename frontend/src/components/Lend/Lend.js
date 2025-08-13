@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Lend.css';
 import Modal from '../Modal/Modal';
 
-const API_URL = 'http://localhost:3001/api/v1';
+const API_URL = '/api/v1';
 
 function Lend() {
     const [formData, setFormData] = useState({

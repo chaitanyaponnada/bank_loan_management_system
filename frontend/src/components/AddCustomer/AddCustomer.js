@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './AddCustomer.css';
 import Modal from '../Modal/Modal';
 
-const API_URL = 'http://localhost:3001/api/v1';
+const API_URL = '/api/v1';
 
 function AddCustomer() {
     const [formData, setFormData] = useState({ customer_id: '', name: '' });
