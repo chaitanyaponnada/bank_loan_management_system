@@ -10,7 +10,7 @@ body {
     padding: 2rem 0; 
     box-sizing: border-box;
 
-    background-image: url('https://res.cloudinary.com/dybfozdea/image/upload/v1753510622/ChatGPT_Image_Jul_26_2025_11_45_57_AM_hrsdxx.png');
+    background-image: url('./images/background.png');
     background-color: #1a1a2e;
     background-size: cover;
     background-position: center;
